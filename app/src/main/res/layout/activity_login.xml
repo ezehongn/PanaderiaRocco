@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F4EFE7">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="30dp"
+        android:gravity="center_horizontal">
+
+        <!-- LOGO -->
+
+        <ImageView
+            android:id="@+id/imageLogo"
+            android:layout_width="220dp"
+            android:layout_height="220dp"
+            android:layout_marginTop="40dp"
+            android:src="@drawable/logo_rocco"
+            android:scaleType="fitCenter"/>
+
+        <!-- TITULO -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Panadería Rocco"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:textColor="#2D1B10"
+            android:layout_marginTop="10dp"/>
+
+        <!-- EMAIL -->
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            app:boxCornerRadiusTopStart="20dp"
+            app:boxCornerRadiusTopEnd="20dp"
+            app:boxCornerRadiusBottomStart="20dp"
+            app:boxCornerRadiusBottomEnd="20dp"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Correo"
+                android:inputType="textEmailAddress"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- PASSWORD -->
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            app:endIconMode="password_toggle"
+            app:boxCornerRadiusTopStart="20dp"
+            app:boxCornerRadiusTopEnd="20dp"
+            app:boxCornerRadiusBottomStart="20dp"
+            app:boxCornerRadiusBottomEnd="20dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Contraseña"
+                android:inputType="textPassword"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- RECORDAR -->
+
+        <CheckBox
+            android:id="@+id/checkRecordar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Recordarme"
+            android:textColor="#5A4636"
+            android:layout_marginTop="10dp"/>
+
+        <!-- INGRESAR -->
+
+        <Button
+            android:id="@+id/btnIngresar"
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            android:text="Ingresar"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:textColor="#2D1B10"
+            android:textAllCaps="false"
+            android:backgroundTint="#F2C95E"
+            android:layout_marginTop="10dp"/>
+
+        <!-- INVITADO -->
+
+        <Button
+            android:id="@+id/btnInvitado"
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            android:text="Entrar como invitado"
+            android:textAllCaps="false"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:textColor="#2D1B10"
+            android:backgroundTint="#D8C4A8"
+            android:layout_marginTop="10dp"/>
+
+    </LinearLayout>
+
+</ScrollView>

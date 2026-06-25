@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:layout_width="match_parent"
+
+    android:layout_height="wrap_content"
+
+    android:layout_marginBottom="14dp"
+
+    app:cardCornerRadius="22dp"
+
+    app:cardElevation="3dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+
+        android:layout_height="wrap_content"
+
+        android:padding="16dp">
+
+        <!-- ELIMINAR -->
+
+        <ImageView
+            android:id="@+id/btnEliminarProducto"
+
+            android:layout_width="22dp"
+
+            android:layout_height="22dp"
+
+            android:layout_alignParentEnd="true"
+
+            android:src="@android:drawable/ic_menu_close_clear_cancel"
+
+            app:tint="#D13A2E"/>
+
+        <!-- IMAGEN -->
+
+        <ImageView
+            android:id="@+id/imageProductoFiado"
+
+            android:layout_width="70dp"
+
+            android:layout_height="70dp"
+
+            android:layout_centerVertical="true"
+
+            android:scaleType="centerCrop"/>
+
+        <!-- CONTENIDO -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+
+            android:layout_height="wrap_content"
+
+            android:layout_toEndOf="@id/imageProductoFiado"
+
+            android:layout_marginStart="14dp"
+
+            android:orientation="vertical">
+
+            <!-- NOMBRE -->
+
+            <TextView
+                android:id="@+id/textNombreProductoFiado"
+
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+
+                android:layout_marginEnd="30dp"
+
+                android:maxLines="1"
+
+                android:ellipsize="end"
+
+                android:text="Coca Cola"
+
+                android:textSize="18sp"
+
+                android:textStyle="bold"
+
+                android:textColor="#2D1B10"/>
+
+            <!-- PRECIO -->
+
+            <TextView
+                android:id="@+id/textPrecioProductoFiado"
+
+                android:layout_width="wrap_content"
+
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="4dp"
+
+                android:text="$2400"
+
+                android:textSize="15sp"
+
+                android:textColor="#8B7B6B"/>
+
+            <!-- CONTROLES -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="14dp"
+
+                android:gravity="center_vertical"
+
+                android:orientation="horizontal">
+
+                <!-- MENOS -->
+
+                <TextView
+                    android:id="@+id/btnMenos"
+
+                    android:layout_width="36dp"
+
+                    android:layout_height="36dp"
+
+                    android:background="@drawable/bg_cantidad"
+
+                    android:gravity="center"
+
+                    android:text="-"
+
+                    android:textColor="#2D1B10"
+
+                    android:textSize="20sp"
+
+                    android:textStyle="bold"/>
+
+                <!-- CANTIDAD -->
+
+                <TextView
+                    android:id="@+id/textCantidad"
+
+                    android:layout_width="60dp"
+
+                    android:layout_height="wrap_content"
+
+                    android:gravity="center"
+
+                    android:text="1"
+
+                    android:textColor="#2D1B10"
+
+                    android:textSize="17sp"
+
+                    android:textStyle="bold"/>
+
+                <LinearLayout
+                    android:id="@+id/layoutCantidadKg"
+
+                    android:layout_width="wrap_content"
+
+                    android:layout_height="40dp"
+
+                    android:orientation="horizontal"
+
+                    android:gravity="center_vertical"
+
+                    android:paddingStart="10dp"
+
+                    android:paddingEnd="10dp"
+
+                    android:background="@drawable/bg_input_kg"
+
+                    android:visibility="gone">
+
+                    <EditText
+                        android:id="@+id/editCantidadKg"
+
+                        android:layout_width="70dp"
+
+                        android:layout_height="match_parent"
+
+                        android:background="@android:color/transparent"
+
+                        android:gravity="center"
+
+                        android:hint="0.250"
+
+                        android:inputType="numberDecimal"
+
+                        android:textColor="#2D1B10"
+
+                        android:textColorHint="#9B8A77"
+
+                        android:textSize="15sp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+
+                        android:layout_height="wrap_content"
+
+                        android:text="kg"
+
+                        android:textStyle="bold"
+
+                        android:textColor="#8B7B6B"
+
+                        android:textSize="14sp"/>
+                </LinearLayout>
+                <!-- MAS -->
+
+                <TextView
+                    android:id="@+id/btnMas"
+
+                    android:layout_width="36dp"
+
+                    android:layout_height="36dp"
+
+                    android:background="@drawable/bg_cantidad"
+
+                    android:gravity="center"
+
+                    android:text="+"
+
+                    android:textColor="#2D1B10"
+
+                    android:textSize="20sp"
+
+                    android:textStyle="bold"/>
+
+                <!-- SUBTOTAL -->
+
+                <TextView
+                    android:id="@+id/textSubtotal"
+
+                    android:layout_width="0dp"
+
+                    android:layout_height="wrap_content"
+
+                    android:layout_weight="1"
+
+                    android:gravity="end"
+
+                    android:text="$2400"
+
+                    android:textColor="#2D1B10"
+
+                    android:textSize="18sp"
+
+                    android:textStyle="bold"/>
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

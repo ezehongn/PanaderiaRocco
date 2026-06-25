@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F0E8">
+
+    <!-- HEADER -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- TITULO -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CUENTAS"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:textColor="#2D1B10"
+            android:layout_marginStart="22dp"
+            android:layout_marginTop="22dp"/>
+
+        <!-- SUBTITULO -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Gestión de fiados y deudas"
+            android:textSize="16sp"
+            android:textColor="#7B6A58"
+            android:layout_marginStart="22dp"
+            android:layout_marginTop="4dp"/>
+
+    </LinearLayout>
+
+    <!-- BUSCADOR -->
+
+    <EditText
+        android:id="@+id/editBuscarDeudor"
+
+        android:layout_width="match_parent"
+
+        android:layout_height="52dp"
+
+        android:layout_marginStart="18dp"
+
+        android:layout_marginTop="110dp"
+
+        android:layout_marginEnd="18dp"
+
+        android:background="@drawable/bg_input"
+
+        android:hint="Buscar cliente o apodo"
+
+        android:paddingStart="16dp"
+
+        android:paddingEnd="16dp"
+
+        android:textColor="#2D1B10"
+
+        android:textColorHint="#8B7B6B" />
+
+    <!-- LISTA -->
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerDeudores"
+
+        android:layout_width="match_parent"
+
+        android:layout_height="match_parent"
+
+        android:layout_marginTop="175dp"
+
+        android:paddingStart="14dp"
+
+        android:paddingEnd="14dp"
+
+        android:paddingBottom="100dp"/>
+
+    <!-- BOTON FLOTANTE -->
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btnOpcionesCuentas"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="22dp"
+        android:layout_marginBottom="32dp"
+        android:src="@drawable/ic_tune"
+        app:backgroundTint="#F2C95E"
+        />
+
+</RelativeLayout>

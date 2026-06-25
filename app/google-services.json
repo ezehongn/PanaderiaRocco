@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "121339847772",
+    "project_id": "panaderiarocco-c2670",
+    "storage_bucket": "panaderiarocco-c2670.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:121339847772:android:21160e83b17c51beb83299",
+        "android_client_info": {
+          "package_name": "com.example.pananegria"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB4aQJ04W6_HgmnbX0fCxXlJ9GvPEy2s8g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

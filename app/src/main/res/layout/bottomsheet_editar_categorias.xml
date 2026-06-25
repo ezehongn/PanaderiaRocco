@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <TextView
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="Editar categorías"
+
+        android:textSize="22sp"
+
+        android:textStyle="bold"
+
+        android:textColor="#2D1B10"/>
+
+    <com.google.android.material.chip.ChipGroup
+
+        android:id="@+id/chipGroupCategoriasEditar"
+
+        android:layout_width="match_parent"
+
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="20dp"
+
+        app:singleLine="false"
+
+        app:chipSpacingHorizontal="8dp"
+
+        app:chipSpacingVertical="8dp"/>
+
+    <EditText
+
+        android:id="@+id/editCategoriaNueva"
+
+        android:layout_width="match_parent"
+
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="20dp"
+
+        android:hint="Agregar categoría"
+
+        android:inputType="text"
+
+        android:imeOptions="actionDone"/>
+
+    <Button
+
+        android:id="@+id/btnGuardarCategorias"
+
+        android:layout_width="match_parent"
+
+        android:layout_height="60dp"
+
+        android:layout_marginTop="24dp"
+
+        android:text="Guardar cambios"
+
+        android:textSize="18sp"
+
+        android:textStyle="bold"
+
+        android:textColor="#2D1B10"
+
+        android:backgroundTint="#F2C95E"/>
+
+</LinearLayout>

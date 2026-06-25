@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.cardview.widget.CardView
+    android:id="@+id/cardDeudor"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    android:layout_marginTop="10dp"
+    android:layout_marginBottom="10dp"
+
+    app:cardCornerRadius="22dp"
+    app:cardElevation="4dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:orientation="horizontal"
+
+        android:gravity="center_vertical"
+
+        android:padding="20dp">
+
+        <!-- ICONO -->
+
+        <ImageView
+            android:layout_width="52dp"
+            android:layout_height="52dp"
+            android:src="@drawable/ic_person"
+            app:tint="#7B5B2E"/>
+
+        <!-- DATOS -->
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+
+            android:orientation="vertical"
+
+            android:layout_marginStart="16dp">
+
+            <!-- NOMBRE -->
+
+            <TextView
+                android:id="@+id/textNombreDeudor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:text="Juan Ramirez"
+
+                android:textSize="20sp"
+                android:textStyle="bold"
+
+                android:textColor="#2D1B10"/>
+
+            <!-- SUBTEXTO -->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:text="Fiados pendientes"
+
+                android:textSize="14sp"
+
+                android:textColor="#8A7A68"
+
+                android:layout_marginTop="4dp"/>
+
+        </LinearLayout>
+
+        <!-- MONTO -->
+
+        <TextView
+            android:id="@+id/textMontoDeuda"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="$20.000"
+
+            android:textSize="22sp"
+            android:textStyle="bold"
+
+            android:textColor="#B3261E"/>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

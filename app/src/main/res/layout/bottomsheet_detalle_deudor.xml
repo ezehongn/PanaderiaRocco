@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+
+    android:layout_height="match_parent"
+
+    android:orientation="vertical"
+
+    android:background="#F8F3EA"
+
+    android:padding="20dp">
+
+    <!-- HEADER -->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/imageLogoDetalle"
+
+            android:layout_width="90dp"
+
+            android:layout_height="50dp"
+
+            android:layout_centerHorizontal="true"
+
+            android:src="@drawable/logo_rocco"
+
+            android:scaleType="fitCenter" />
+
+    </RelativeLayout>
+
+    <!-- NOMBRE -->
+
+    <!-- NOMBRE + EDITAR -->
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="12dp"
+
+        android:layout_gravity="center_horizontal"
+
+        android:orientation="horizontal"
+
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/textNombreClienteDetalle"
+
+            android:layout_width="wrap_content"
+
+            android:layout_height="wrap_content"
+
+            android:text="Juan Ramirez"
+
+            android:textColor="#2D1B10"
+
+            android:textStyle="bold"
+
+            android:textSize="26sp" />
+
+        <ImageView
+            android:id="@+id/btnEditarNombre"
+
+            android:layout_width="22dp"
+
+            android:layout_height="22dp"
+
+            android:layout_marginStart="10dp"
+
+            android:src="@drawable/ic_edit"
+
+            android:tint="#8B7B6B"
+
+            android:contentDescription="Editar nombre" />
+    </LinearLayout>
+
+    <!-- APODOS -->
+
+    <!-- APODOS -->
+
+    <com.google.android.material.chip.ChipGroup
+        android:id="@+id/chipGroupApodos"
+
+        android:layout_width="match_parent"
+
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="12dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+
+        android:layout_height="52dp"
+
+        android:layout_marginTop="10dp"
+
+        android:orientation="horizontal"
+
+        android:background="@drawable/bg_input"
+
+        android:gravity="center_vertical"
+
+        android:paddingStart="16dp"
+
+        android:paddingEnd="12dp">
+
+        <EditText
+            android:id="@+id/editApodo"
+
+            android:layout_width="0dp"
+
+            android:layout_height="wrap_content"
+
+            android:layout_weight="1"
+
+            android:background="@android:color/transparent"
+
+            android:hint="Agregar apodo"
+
+            android:textColor="#2D1B10"
+
+            android:textColorHint="#8B7B6B" />
+
+        <ImageView
+            android:id="@+id/btnAgregarApodo"
+
+            android:layout_width="24dp"
+
+            android:layout_height="24dp"
+
+            android:src="@drawable/ic_add"
+
+            app:tint="#2D1B10" />
+    </LinearLayout>
+    <!-- SUBTITULO -->
+
+    <Button
+        android:id="@+id/btnTogglePagadas"
+
+        android:layout_width="wrap_content"
+
+        android:layout_height="42dp"
+
+        android:layout_marginTop="12dp"
+
+        android:layout_gravity="center_horizontal"
+
+        android:text="OCULTAR PAGADAS"
+
+        android:textAllCaps="false"
+
+        android:textStyle="bold"
+
+        android:textColor="#2D1B10"
+
+        android:backgroundTint="#E8DCC2"/>
+
+    <!-- LISTA -->
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerDetalleDeuda"
+
+        android:layout_width="match_parent"
+
+        android:layout_height="0dp"
+
+        android:layout_weight="1"
+
+        android:layout_marginTop="18dp"/>
+
+    <!-- FOOTER -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="18dp"
+
+        android:orientation="horizontal"
+
+        android:gravity="center_vertical">
+
+        <!-- TOTAL -->
+
+        <LinearLayout
+            android:layout_width="0dp"
+
+            android:layout_height="wrap_content"
+
+            android:layout_weight="1"
+
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+
+                android:layout_height="wrap_content"
+
+                android:text="Pendiente"
+
+                android:textColor="#8B7B6B"
+
+                android:textSize="14sp"/>
+
+            <TextView
+                android:id="@+id/textFooterPendiente"
+
+                android:layout_width="wrap_content"
+
+                android:layout_height="wrap_content"
+
+                android:text="$16.800"
+
+                android:textColor="#D13A2E"
+
+                android:textStyle="bold"
+
+                android:textSize="24sp"/>
+        </LinearLayout>
+
+        <!-- PAGAR TODO -->
+
+        <Button
+            android:id="@+id/btnPagarTodo"
+
+            android:layout_width="200dp"
+
+            android:layout_height="56dp"
+
+            android:text="PAGAR TODO"
+
+            android:textStyle="bold"
+
+            android:textColor="#2D1B10"
+
+            android:textSize="16sp"
+
+            android:backgroundTint="#F3CD72"/>
+    </LinearLayout>
+
+</LinearLayout>

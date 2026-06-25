@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="#F8F2EA">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Opciones cuentas"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        android:textColor="#2D1B10"
+        android:layout_marginBottom="20dp"/>
+
+    <Button
+        android:id="@+id/btnRegistrarDeuda"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="Registrar deuda"
+        android:textSize="18sp"
+        android:textAllCaps="false"
+        android:textStyle="bold"
+        android:backgroundTint="#F2C95E"
+        android:textColor="#2D1B10"/>
+
+    <Button
+        android:id="@+id/btnToggleSaldadas"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="12dp"
+        android:text="Mostrar cuentas saldadas"
+        android:textSize="18sp"
+        android:textAllCaps="false"
+        android:textStyle="bold"
+        android:backgroundTint="#D9D9D9"
+        android:textColor="#2D1B10"/>
+
+    <Button
+
+        android:id="@+id/btnVerEstadisticas"
+
+        android:layout_width="match_parent"
+
+        android:layout_height="60dp"
+
+        android:layout_marginTop="12dp"
+
+        android:text="Ver estadísticas"
+
+        android:textSize="18sp"
+
+        android:textAllCaps="false"
+
+        android:textStyle="bold"
+
+        android:backgroundTint="#9BCF9B"
+
+        android:textColor="#1E3A1E"/>
+
+    <!-- CERRAR SESION -->
+
+    <Button
+        android:id="@+id/btnCerrarSesion"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="12dp"
+        android:backgroundTint="#5F483C"
+        android:text="Cerrar sesión"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+
+</LinearLayout>

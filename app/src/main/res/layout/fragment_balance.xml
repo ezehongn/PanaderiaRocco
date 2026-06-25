@@ -1,0 +1,665 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:background="#F5F0E8">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:orientation="vertical"
+
+            android:padding="20dp">
+
+            <!-- HEADER -->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:text="BALANCE"
+
+                android:textSize="34sp"
+
+                android:textStyle="bold"
+
+                android:textColor="#2D1B10"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:text="Registro diario y estadísticas"
+
+                android:textSize="16sp"
+
+                android:textColor="#7B6A58"
+
+                android:layout_marginTop="4dp"/>
+
+            <!-- CARD PRINCIPAL -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="22dp"
+
+                android:orientation="vertical"
+
+                android:padding="18dp"
+
+                android:background="@drawable/bg_card">
+
+                <!-- INPUTS -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:orientation="horizontal">
+
+                    <!-- MAÑANA -->
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+
+                        android:layout_weight="1"
+
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+                            android:orientation="horizontal"
+
+                            android:gravity="center_vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+
+                                android:text="MONTO MAÑANA"
+
+                                android:textStyle="bold"
+
+                                android:textColor="#2D1B10"/>
+
+                            <ImageView
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+
+                                android:layout_marginStart="8dp"
+
+                                android:src="@drawable/ic_sun"/>
+                        </LinearLayout>
+
+                        <EditText
+                            android:id="@+id/editMontoManana"
+
+                            android:layout_width="match_parent"
+                            android:layout_height="58dp"
+
+                            android:layout_marginTop="10dp"
+
+                            android:background="@drawable/bg_input"
+
+                            android:hint="$ 0,00"
+
+                            android:inputType="numberDecimal"
+
+                            android:paddingStart="16dp"
+
+                            android:paddingEnd="16dp"
+
+                            android:textColor="#2D1B10"
+
+                            android:textColorHint="#B0A79F"/>
+                    </LinearLayout>
+
+                    <Space
+                        android:layout_width="16dp"
+                        android:layout_height="wrap_content"/>
+
+                    <!-- TARDE -->
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+
+                        android:layout_weight="1"
+
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+                            android:orientation="horizontal"
+
+                            android:gravity="center_vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+
+                                android:text="MONTO TARDE"
+
+                                android:textStyle="bold"
+
+                                android:textColor="#2D1B10"/>
+
+                            <ImageView
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+
+                                android:layout_marginStart="8dp"
+
+                                android:src="@drawable/ic_sunset"/>
+                        </LinearLayout>
+
+                        <EditText
+                            android:id="@+id/editMontoTarde"
+
+                            android:layout_width="match_parent"
+                            android:layout_height="58dp"
+
+                            android:layout_marginTop="10dp"
+
+                            android:background="@drawable/bg_input"
+
+                            android:hint="$ 0,00"
+
+                            android:inputType="numberDecimal"
+
+                            android:paddingStart="16dp"
+
+                            android:paddingEnd="16dp"
+
+                            android:textColor="#2D1B10"
+
+                            android:textColorHint="#B0A79F"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!-- BALANCE -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginTop="20dp"
+
+                    android:orientation="horizontal"
+
+                    android:gravity="center_vertical"
+
+                    android:padding="18dp"
+
+                    android:background="@drawable/bg_input">
+
+                    <!-- TOTAL -->
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+
+                        android:layout_weight="1"
+
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+                            android:id="@+id/textTituloBalance"
+
+                            android:text="BALANCE"
+
+                            android:textStyle="bold"
+
+                            android:textColor="#2D1B10"/>
+
+                        <TextView
+                            android:id="@+id/textBalanceTotal"
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+                            android:layout_marginTop="10dp"
+
+                            android:text="$ 0"
+
+                            android:textSize="30sp"
+
+                            android:textStyle="bold"
+
+                            android:textColor="#2D1B10"/>
+                    </LinearLayout>
+
+                    <!-- BOTON -->
+
+                    <Button
+                        android:id="@+id/btnGuardarBalance"
+
+                        android:layout_width="120dp"
+                        android:layout_height="64dp"
+
+                        android:enabled="false"
+
+                        android:text="GUARDAR BALANCE"
+
+                        android:textStyle="bold"
+
+                        android:textSize="15sp"
+
+                        android:textColor="#2D1B10"
+
+                        android:backgroundTint="#F2C95E"
+
+                        android:elevation="0dp"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- RESUMEN SEMANAL -->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="28dp"
+
+                android:text="RESUMEN SEMANAL"
+
+                android:textSize="22sp"
+
+                android:textStyle="bold"
+
+                android:textColor="#2D1B10"/>
+
+            <!-- EVOLUCION -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="22dp"
+
+                android:layout_marginBottom="22dp"
+
+                android:orientation="vertical"
+
+                android:padding="22dp"
+
+                android:background="@drawable/bg_card"
+
+                android:elevation="3dp">
+
+                <!-- HEADER -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:gravity="center_vertical"
+
+                    android:orientation="horizontal">
+
+                    <!-- SWITCH -->
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="52dp"
+
+                        android:background="@drawable/bg_input"
+
+                        android:orientation="horizontal"
+
+                        android:padding="4dp">
+
+                        <!-- SEMANA -->
+
+                        <Button
+                            android:id="@+id/btnGraficoSemana"
+
+                            android:layout_width="120dp"
+                            android:layout_height="match_parent"
+
+                            android:text="SEMANA"
+
+                            android:textStyle="bold"
+
+                            android:textColor="#2D1B10"
+
+                            android:textSize="14sp"
+
+                            android:backgroundTint="@android:color/transparent"/>
+
+                        <!-- MES -->
+
+                        <Button
+                            android:id="@+id/btnGraficoMes"
+
+                            android:layout_width="120dp"
+                            android:layout_height="match_parent"
+
+                            android:text="MES"
+
+                            android:textStyle="bold"
+
+                            android:textColor="#8B7B6B"
+
+                            android:textSize="14sp"
+
+                            android:backgroundTint="@android:color/transparent"/>
+
+                    </LinearLayout>
+                    <ImageView
+                        android:id="@+id/btnCompartirGrafico"
+
+                        android:layout_width="42dp"
+
+                        android:layout_height="42dp"
+
+                        android:layout_marginStart="10dp"
+
+                        android:background="@drawable/bg_chip_selected"
+
+                        android:padding="10dp"
+
+                        android:src="@drawable/ic_download"
+
+                        app:tint="#2D1B10"/>
+                </LinearLayout>
+
+                <!-- GRAFICO -->
+
+                <com.github.mikephil.charting.charts.LineChart
+                    android:id="@+id/chartBalance"
+
+                    android:layout_width="match_parent"
+
+                    android:layout_height="260dp"
+
+                    android:layout_marginTop="18dp"/>
+
+                <!-- FOOTER -->
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginTop="18dp"
+
+                    android:gravity="center_vertical"
+
+                    android:orientation="horizontal">
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- DATOS RAPIDOS -->
+
+            <com.google.android.material.card.MaterialCardView
+
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="18dp"
+
+                app:cardCornerRadius="24dp"
+
+                app:cardElevation="2dp"
+
+                app:strokeColor="#EFE7DD"
+
+                app:strokeWidth="1dp"
+
+                app:cardBackgroundColor="#FFFCF8">
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+
+                    android:layout_height="wrap_content"
+
+                    android:orientation="vertical"
+
+                    android:padding="22dp">
+
+                    <!-- TITULO -->
+
+                    <TextView
+
+                        android:layout_width="wrap_content"
+
+                        android:layout_height="wrap_content"
+
+                        android:text="DATOS SEMANAL"
+
+                        android:textColor="#2D1B10"
+
+                        android:textSize="22sp"
+
+                        android:textStyle="bold"/>
+
+                    <!-- GRID -->
+
+                    <LinearLayout
+
+                        android:layout_width="match_parent"
+
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginTop="20dp"
+
+                        android:orientation="horizontal">
+
+                        <!-- IZQUIERDA -->
+
+                        <LinearLayout
+
+                            android:layout_width="0dp"
+
+                            android:layout_height="wrap_content"
+
+                            android:layout_weight="1"
+
+                            android:orientation="vertical">
+
+                            <!-- PROMEDIO -->
+
+                            <TextView
+
+                                android:layout_width="wrap_content"
+
+                                android:layout_height="wrap_content"
+
+                                android:text="PROMEDIO DIARIO"
+
+                                android:textColor="#8B7B6B"
+
+                                android:textSize="12sp"
+
+                                android:textStyle="bold"/>
+
+                            <TextView
+
+                                android:id="@+id/textPromedio"
+
+                                android:layout_width="wrap_content"
+
+                                android:layout_height="wrap_content"
+
+                                android:layout_marginTop="4dp"
+
+                                android:text="$0"
+
+                                android:textColor="#2D1B10"
+
+                                android:textSize="20sp"
+
+                                android:textStyle="bold"/>
+
+                            <!-- MEJOR DIA -->
+
+                            <TextView
+
+                                android:layout_width="wrap_content"
+
+                                android:layout_height="wrap_content"
+
+                                android:layout_marginTop="22dp"
+
+                                android:text="MEJOR DÍA"
+
+                                android:textColor="#8B7B6B"
+
+                                android:textSize="12sp"
+
+                                android:textStyle="bold"/>
+
+                            <TextView
+
+                                android:id="@+id/textMejorDia"
+
+                                android:layout_width="wrap_content"
+
+                                android:layout_height="wrap_content"
+
+                                android:layout_marginTop="4dp"
+
+                                android:text="-"
+
+                                android:textColor="#2D1B10"
+
+                                android:textSize="18sp"
+
+                                android:textStyle="bold"/>
+
+                        </LinearLayout>
+
+                        <!-- SEPARADOR -->
+
+                        <View
+
+                            android:layout_width="1dp"
+
+                            android:layout_height="match_parent"
+
+                            android:layout_marginHorizontal="16dp"
+
+                            android:background="#EFE7DD"/>
+
+                        <!-- DERECHA -->
+
+                        <LinearLayout
+
+                            android:layout_width="0dp"
+
+                            android:layout_height="wrap_content"
+
+                            android:layout_weight="1"
+
+                            android:orientation="vertical">
+
+                            <!-- PEOR DIA -->
+
+                            <TextView
+
+                                android:layout_width="wrap_content"
+
+                                android:layout_height="wrap_content"
+
+                                android:text="PEOR DÍA"
+
+                                android:textColor="#8B7B6B"
+
+                                android:textSize="12sp"
+
+                                android:textStyle="bold"/>
+
+                            <TextView
+
+                                android:id="@+id/textPeorDia"
+
+                                android:layout_width="wrap_content"
+
+                                android:layout_height="wrap_content"
+
+                                android:layout_marginTop="4dp"
+
+                                android:text="-"
+
+                                android:textColor="#2D1B10"
+
+                                android:textSize="18sp"
+
+                                android:textStyle="bold"/>
+
+                            <!-- TOTAL -->
+
+                            <TextView
+
+                                android:layout_width="wrap_content"
+
+                                android:layout_height="wrap_content"
+
+                                android:layout_marginTop="22dp"
+
+                                android:text="TOTAL SEMANAL"
+
+                                android:textColor="#8B7B6B"
+
+                                android:textSize="12sp"
+
+                                android:textStyle="bold"/>
+
+                            <TextView
+
+                                android:id="@+id/textTotalSemanal"
+
+                                android:layout_width="wrap_content"
+
+                                android:layout_height="wrap_content"
+
+                                android:layout_marginTop="4dp"
+
+                                android:text="$0"
+
+                                android:textColor="#2D1B10"
+
+                                android:textSize="20sp"
+
+                                android:textStyle="bold"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

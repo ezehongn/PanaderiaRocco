@@ -1,0 +1,624 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:layout_width="match_parent"
+
+    android:layout_height="wrap_content"
+
+    android:fillViewport="true"
+
+    android:background="#F6F2EC">
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+
+        android:layout_height="wrap_content"
+
+        android:orientation="vertical"
+
+        android:padding="18dp">
+
+        <!-- HANDLE -->
+
+        <View
+
+            android:layout_width="72dp"
+
+            android:layout_height="7dp"
+
+            android:layout_gravity="center"
+
+            android:layout_marginTop="4dp"
+
+            android:background="#D2C5B8"/>
+
+        <!-- IMAGEN -->
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="24dp"
+
+            android:orientation="horizontal"
+
+            android:gravity="center_vertical">
+
+            <!-- LABEL -->
+
+            <LinearLayout
+
+                android:layout_width="74dp"
+
+                android:layout_height="wrap_content"
+
+                android:orientation="vertical"
+
+                android:gravity="center_horizontal">
+
+                <LinearLayout
+
+                    android:layout_width="58dp"
+
+                    android:layout_height="58dp"
+
+                    android:gravity="center"
+
+                    android:background="@drawable/bg_circle_soft">
+
+                    <ImageView
+
+                        android:layout_width="28dp"
+
+                        android:layout_height="28dp"
+
+                        android:src="@drawable/ic_image"
+
+                        android:tint="#5A4636"/>
+
+                </LinearLayout>
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+
+                    android:layout_height="wrap_content"
+
+                    android:text="Imagen"
+
+                    android:textSize="15sp"
+
+                    android:textColor="#5A4636"
+
+                    android:layout_marginTop="8dp"/>
+
+            </LinearLayout>
+
+            <!-- CARD -->
+
+            <LinearLayout
+
+                android:layout_width="0dp"
+
+                android:layout_height="260dp"
+
+                android:layout_weight="1"
+
+                android:layout_marginStart="1dp"
+
+                android:background="@drawable/bg_product_detail_card"
+
+                android:padding="14dp"
+
+                android:gravity="center">
+
+                <ImageView
+
+                    android:id="@+id/imageDetalleProducto"
+
+                    android:layout_width="match_parent"
+
+                    android:layout_height="match_parent"
+
+                    android:scaleType="fitCenter"/>
+
+            </LinearLayout>
+
+            <!-- EDIT -->
+
+            <ImageButton
+
+                android:id="@+id/btnEditarImagen"
+
+                android:layout_width="56dp"
+
+                android:layout_height="56dp"
+
+                android:layout_marginStart="12dp"
+
+                android:background="@drawable/bg_edit_button"
+
+                android:padding="14dp"
+
+                android:src="@drawable/ic_edit"
+
+                android:tint="#5A4636"/>
+
+        </LinearLayout>
+
+        <!-- NOMBRE -->
+
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="18dp"
+
+            android:orientation="horizontal"
+
+            android:gravity="center_vertical">
+
+            <LinearLayout
+
+                android:layout_width="74dp"
+
+                android:layout_height="wrap_content"
+
+                android:orientation="vertical"
+
+                android:gravity="center_horizontal">
+
+                <LinearLayout
+
+                    android:layout_width="58dp"
+
+                    android:layout_height="58dp"
+
+                    android:gravity="center"
+
+                    android:background="@drawable/bg_circle_soft">
+
+                    <ImageView
+
+                        android:layout_width="28dp"
+
+                        android:layout_height="28dp"
+
+                        android:src="@drawable/ic_name"
+
+                        android:tint="#5A4636"/>
+
+                </LinearLayout>
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+
+                    android:layout_height="wrap_content"
+
+                    android:text="Nombre"
+
+                    android:textSize="15sp"
+
+                    android:textColor="#5A4636"
+
+                    android:layout_marginTop="8dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+
+                android:layout_width="0dp"
+
+                android:layout_height="wrap_content"
+
+                android:layout_weight="1"
+
+                android:orientation="vertical"
+
+                android:background="@drawable/bg_product_detail_card"
+
+                android:padding="22dp">
+
+
+
+                <TextView
+
+                    android:id="@+id/textDetalleNombre"
+
+                    android:layout_width="wrap_content"
+
+                    android:layout_height="wrap_content"
+
+                    android:text="Producto"
+
+                    android:textSize="30sp"
+
+                    android:textStyle="bold"
+
+                    android:textColor="#2D1B10"
+
+                    android:layout_marginTop="8dp"/>
+
+            </LinearLayout>
+
+            <ImageButton
+
+                android:id="@+id/btnEditarNombre"
+
+                android:layout_width="56dp"
+
+                android:layout_height="56dp"
+
+                android:layout_marginStart="12dp"
+
+                android:background="@drawable/bg_edit_button"
+
+                android:padding="14dp"
+
+                android:src="@drawable/ic_edit"
+
+                android:tint="#5A4636"/>
+
+        </LinearLayout>
+
+        <!-- PRECIO -->
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="16dp"
+
+            android:orientation="horizontal"
+
+            android:gravity="center_vertical">
+
+            <LinearLayout
+
+                android:layout_width="74dp"
+
+                android:layout_height="wrap_content"
+
+                android:orientation="vertical"
+
+                android:gravity="center_horizontal">
+
+                <LinearLayout
+
+                    android:layout_width="58dp"
+
+                    android:layout_height="58dp"
+
+                    android:gravity="center"
+
+                    android:background="@drawable/bg_circle_soft">
+
+                    <ImageView
+
+                        android:layout_width="28dp"
+
+                        android:layout_height="28dp"
+
+                        android:src="@drawable/ic_money"
+
+                        android:tint="#5A4636"/>
+
+                </LinearLayout>
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+
+                    android:layout_height="wrap_content"
+
+                    android:text="Precio"
+
+                    android:textSize="15sp"
+
+                    android:textColor="#5A4636"
+
+                    android:layout_marginTop="8dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+
+                android:layout_width="0dp"
+
+                android:layout_height="wrap_content"
+
+                android:layout_weight="1"
+
+                android:orientation="vertical"
+
+                android:background="@drawable/bg_product_detail_card"
+
+                android:padding="22dp">
+
+
+
+                <TextView
+
+                    android:id="@+id/textDetallePrecio"
+
+                    android:layout_width="wrap_content"
+
+                    android:layout_height="wrap_content"
+
+                    android:text="$0000"
+
+                    android:textSize="32sp"
+
+                    android:textStyle="bold"
+
+                    android:textColor="#D69B1F"
+
+                    android:layout_marginTop="8dp"/>
+
+            </LinearLayout>
+
+            <ImageButton
+
+                android:id="@+id/btnEditarPrecio"
+
+                android:layout_width="56dp"
+
+                android:layout_height="56dp"
+
+                android:layout_marginStart="12dp"
+
+                android:background="@drawable/bg_edit_button"
+
+                android:padding="14dp"
+
+                android:src="@drawable/ic_edit"
+
+                android:tint="#5A4636"/>
+
+        </LinearLayout>
+
+        <!-- UNIDAD -->
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="16dp"
+
+            android:orientation="horizontal"
+
+            android:gravity="center_vertical">
+
+            <LinearLayout
+
+                android:layout_width="74dp"
+
+                android:layout_height="wrap_content"
+
+                android:orientation="vertical"
+
+                android:gravity="center_horizontal">
+
+                <LinearLayout
+
+                    android:layout_width="58dp"
+
+                    android:layout_height="58dp"
+
+                    android:gravity="center"
+
+                    android:background="@drawable/bg_circle_soft">
+
+                    <ImageView
+
+                        android:layout_width="28dp"
+
+                        android:layout_height="28dp"
+
+                        android:src="@drawable/ic_unidad"
+
+                        android:tint="#5A4636"/>
+
+                </LinearLayout>
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+
+                    android:layout_height="wrap_content"
+
+                    android:text="Unidad"
+
+                    android:textSize="15sp"
+
+                    android:textColor="#5A4636"
+
+                    android:layout_marginTop="8dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+
+                android:layout_width="0dp"
+
+                android:layout_height="wrap_content"
+
+                android:layout_weight="1"
+
+                android:orientation="vertical"
+
+                android:background="@drawable/bg_product_detail_card"
+
+                android:padding="22dp">
+
+
+
+                <TextView
+
+                    android:id="@+id/textDetalleUnidad"
+
+                    android:layout_width="wrap_content"
+
+                    android:layout_height="wrap_content"
+
+                    android:text="Por unidad"
+
+                    android:textSize="22sp"
+
+                    android:textColor="#5A4636"
+
+                    android:layout_marginTop="8dp"/>
+
+            </LinearLayout>
+
+            <ImageButton
+
+                android:id="@+id/btnEditarUnidad"
+
+                android:layout_width="56dp"
+
+                android:layout_height="56dp"
+
+                android:layout_marginStart="12dp"
+
+                android:background="@drawable/bg_edit_button"
+
+                android:padding="14dp"
+
+                android:src="@drawable/ic_edit"
+
+                android:tint="#5A4636"/>
+
+        </LinearLayout>
+
+        <!-- ETIQUETAS -->
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="16dp"
+
+            android:orientation="horizontal"
+
+            android:gravity="center_vertical">
+
+            <LinearLayout
+
+                android:layout_width="74dp"
+
+                android:layout_height="wrap_content"
+
+                android:orientation="vertical"
+
+                android:gravity="center_horizontal">
+
+                <LinearLayout
+
+                    android:layout_width="58dp"
+
+                    android:layout_height="58dp"
+
+                    android:gravity="center"
+
+                    android:background="@drawable/bg_circle_soft">
+
+                    <ImageView
+
+                        android:layout_width="28dp"
+
+                        android:layout_height="28dp"
+
+                        android:src="@drawable/ic_categoria"
+
+                        android:tint="#5A4636"/>
+
+                </LinearLayout>
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+
+                    android:layout_height="wrap_content"
+
+                    android:text="Categoria"
+
+                    android:textSize="15sp"
+
+                    android:textColor="#5A4636"
+
+                    android:layout_marginTop="8dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+
+                android:layout_width="0dp"
+
+                android:layout_height="wrap_content"
+
+                android:layout_weight="1"
+
+                android:orientation="vertical"
+
+                android:background="@drawable/bg_product_detail_card"
+
+                android:padding="22dp">
+
+
+                <TextView
+
+                    android:id="@+id/textDetalleCategorias"
+
+                    android:layout_width="wrap_content"
+
+                    android:layout_height="wrap_content"
+
+                    android:text="#panificados #facturas"
+
+                    android:textSize="20sp"
+
+                    android:textColor="#5A4636"
+
+                    android:layout_marginTop="10dp"/>
+
+            </LinearLayout>
+
+            <ImageButton
+
+                android:id="@+id/btnEditarCategorias"
+
+                android:layout_width="56dp"
+
+                android:layout_height="56dp"
+
+                android:layout_marginStart="12dp"
+
+                android:background="@drawable/bg_edit_button"
+
+                android:padding="14dp"
+
+                android:src="@drawable/ic_edit"
+
+                android:tint="#5A4636"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:layout_width="match_parent"
+
+    android:layout_height="wrap_content"
+
+    android:orientation="vertical"
+
+    android:paddingBottom="10dp">
+
+    <TextView
+        android:id="@+id/textFechaDetalle"
+
+        android:layout_width="match_parent"
+
+        android:layout_height="wrap_content"
+
+        android:text="Martes 12/05/26"
+
+        android:textColor="#6A5846"
+
+        android:textStyle="bold"
+
+        android:textSize="14sp"
+
+        android:background="#E8DCC2"
+
+        android:padding="10dp"
+
+        android:layout_marginBottom="4dp"/>
+
+    <!-- ITEM -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+
+        android:layout_height="wrap_content"
+
+        android:orientation="horizontal"
+
+        android:gravity="center_vertical"
+
+        android:background="#FFFFFF"
+
+        android:padding="14dp">
+
+        <TextView
+            android:id="@+id/textNombreProductoDetalle"
+
+            android:layout_width="0dp"
+
+            android:layout_height="wrap_content"
+
+            android:layout_weight="1"
+
+            android:text="Pan"
+
+            android:textColor="#2D1B10"
+
+            android:textStyle="bold"
+
+            android:textSize="16sp"/>
+
+        <TextView
+            android:id="@+id/textSubtotalDetalle"
+
+            android:layout_width="wrap_content"
+
+            android:layout_height="wrap_content"
+
+            android:text="$2000"
+
+            android:textColor="#2D1B10"
+
+            android:textStyle="bold"
+
+            android:textSize="15sp"
+
+            android:layout_marginEnd="14dp"/>
+
+        <CheckBox
+            android:id="@+id/checkPagado"
+
+            android:layout_width="wrap_content"
+
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+</LinearLayout>

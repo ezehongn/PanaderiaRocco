@@ -1,0 +1,670 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:layout_width="match_parent"
+
+    android:layout_height="wrap_content"
+
+    android:fillViewport="true"
+
+    android:background="#F6F2EC">
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+
+        android:layout_height="wrap_content"
+
+        android:orientation="vertical"
+
+        android:padding="12dp">
+
+        <!-- HANDLE -->
+
+        <View
+
+            android:layout_width="72dp"
+
+            android:layout_height="7dp"
+
+            android:layout_gravity="center"
+
+            android:background="#D2C5B8"
+
+            android:alpha="0.8"/>
+
+        <!-- TITULO -->
+
+        <TextView
+
+            android:layout_width="wrap_content"
+
+            android:layout_height="wrap_content"
+
+            android:layout_gravity="center_horizontal"
+
+            android:layout_marginTop="24dp"
+
+            android:text="ESTADÍSTICAS DE DEUDORES"
+
+            android:textColor="#2D1B10"
+
+            android:textSize="22sp"
+
+            android:textStyle="bold"
+
+            android:letterSpacing="0.01"/>
+
+        <!-- SUBTITULO -->
+
+        <TextView
+
+            android:layout_width="wrap_content"
+
+            android:layout_height="wrap_content"
+
+            android:layout_gravity="center_horizontal"
+
+            android:layout_marginTop="6dp"
+
+            android:text="Resumen general de cuentas deudoras"
+
+            android:textColor="#8B7B6B"
+
+            android:textSize="16sp"/>
+
+        <!-- GRID -->
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="28dp"
+
+            android:orientation="horizontal"
+
+            android:weightSum="2">
+
+            <!-- CARD 1 -->
+
+            <com.google.android.material.card.MaterialCardView
+
+                android:layout_width="0dp"
+
+                android:layout_height="240dp"
+
+                android:layout_weight="1"
+
+                android:layout_marginEnd="1dp"
+
+                app:cardCornerRadius="24dp"
+
+                app:cardElevation="5dp"
+
+                app:cardUseCompatPadding="true"
+
+                app:strokeColor="#EFE7DD"
+
+                app:strokeWidth="1dp"
+
+                app:cardBackgroundColor="#FFFCF8">
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+
+                    android:layout_height="match_parent"
+
+                    android:orientation="vertical"
+
+                    android:padding="20dp">
+
+                    <LinearLayout
+
+                        android:layout_width="30dp"
+
+                        android:layout_height="30dp"
+
+                        android:gravity="center"
+
+                        android:background="@drawable/bg_circle_soft"
+
+                        android:layout_marginBottom="5dp">
+
+                        <ImageView
+
+                            android:layout_width="24dp"
+
+                            android:layout_height="24dp"
+
+                            android:src="@drawable/ic_money"
+
+                            app:tint="#2B140A"/>
+
+                    </LinearLayout>
+
+                    <TextView
+
+                        android:layout_width="wrap_content"
+
+                        android:layout_height="wrap_content"
+
+                        android:text="DEUDA TOTAL"
+
+                        android:textColor="#8B7B6B"
+
+                        android:textSize="13sp"
+
+                        android:textStyle="bold"/>
+
+                    <TextView
+
+                        android:id="@+id/textDeudaTotal"
+
+                        android:layout_width="wrap_content"
+
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginTop="8dp"
+
+                        android:text="$0"
+
+                        android:textColor="#2B140A"
+
+                        android:textSize="24sp"
+
+                        android:textStyle="bold"/>
+
+                    <TextView
+
+                        android:layout_width="wrap_content"
+
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginTop="6dp"
+
+                        android:text="Total acumulado"
+
+                        android:textColor="#A69689"
+
+                        android:textSize="15sp"/>
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- CARD 2 -->
+
+            <com.google.android.material.card.MaterialCardView
+
+                android:layout_width="0dp"
+
+                android:layout_height="240dp"
+
+                android:layout_weight="1"
+
+                android:layout_marginStart="1dp"
+
+                app:cardCornerRadius="24dp"
+
+                app:cardElevation="5dp"
+
+                app:cardUseCompatPadding="true"
+
+                app:strokeColor="#EFE7DD"
+
+                app:strokeWidth="1dp"
+
+                app:cardBackgroundColor="#FFFCF8">
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+
+                    android:layout_height="match_parent"
+
+                    android:orientation="vertical"
+
+                    android:padding="20dp">
+
+                    <LinearLayout
+
+                        android:layout_width="30dp"
+
+                        android:layout_height="30dp"
+
+                        android:gravity="center"
+
+                        android:background="@drawable/bg_circle_soft"
+
+                        android:layout_marginBottom="5dp">
+
+                        <ImageView
+
+                            android:layout_width="24dp"
+
+                            android:layout_height="24dp"
+
+                            android:src="@drawable/ic_person"
+
+                            app:tint="#2B140A"/>
+
+                    </LinearLayout>
+
+                    <TextView
+
+                        android:layout_width="wrap_content"
+
+                        android:layout_height="wrap_content"
+
+                        android:text="CUENTAS ACTIVAS"
+
+                        android:textColor="#8B7B6B"
+
+                        android:textSize="13sp"
+
+                        android:textStyle="bold"/>
+
+                    <TextView
+
+                        android:id="@+id/textCuentasActivas"
+
+                        android:layout_width="wrap_content"
+
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginTop="8dp"
+
+                        android:text="0"
+
+                        android:textColor="#2B140A"
+
+                        android:textSize="24sp"
+
+                        android:textStyle="bold"/>
+
+                    <TextView
+
+                        android:layout_width="wrap_content"
+
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginTop="6dp"
+
+                        android:text="Clientes con deuda"
+
+                        android:textColor="#A69689"
+
+                        android:textSize="15sp"/>
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+
+        <!-- SEGUNDA FILA -->
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="18dp"
+
+            android:orientation="horizontal"
+
+            android:weightSum="2">
+
+            <!-- CARD 3 -->
+
+            <com.google.android.material.card.MaterialCardView
+
+                android:layout_width="0dp"
+
+                android:layout_height="240dp"
+
+                android:layout_weight="1"
+
+                android:layout_marginEnd="1dp"
+
+                app:cardCornerRadius="24dp"
+
+                app:cardElevation="5dp"
+
+                app:cardUseCompatPadding="true"
+
+                app:strokeColor="#EFE7DD"
+
+                app:strokeWidth="1dp"
+
+                app:cardBackgroundColor="#FFFCF8">
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+
+                    android:layout_height="match_parent"
+
+                    android:orientation="vertical"
+
+                    android:padding="20dp">
+
+                    <LinearLayout
+
+                        android:layout_width="30dp"
+
+                        android:layout_height="30dp"
+
+                        android:gravity="center"
+
+                        android:background="@drawable/bg_circle_soft"
+
+                        android:layout_marginBottom="5dp">
+
+                        <ImageView
+
+                            android:layout_width="24dp"
+
+                            android:layout_height="24dp"
+
+                            android:src="@drawable/ic_calendar"
+
+                            app:tint="#2B140A"/>
+
+                    </LinearLayout>
+
+                    <TextView
+
+                        android:layout_width="wrap_content"
+
+                        android:layout_height="wrap_content"
+
+                        android:text="CUENTA MÁS VIEJA"
+
+                        android:textColor="#8B7B6B"
+
+                        android:textSize="13sp"
+
+                        android:textStyle="bold"/>
+
+                    <TextView
+
+                        android:id="@+id/textCuentaMasVieja"
+
+                        android:layout_width="wrap_content"
+
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginTop="8dp"
+
+                        android:text="0 días"
+
+                        android:textColor="#2B140A"
+
+                        android:textSize="24sp"
+
+                        android:textStyle="bold"/>
+
+                    <TextView
+
+                        android:id="@+id/textClienteMasViejo"
+
+                        android:layout_width="wrap_content"
+
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginTop="6dp"
+
+                        android:text="-"
+
+                        android:textColor="#A69689"
+
+                        android:textSize="15sp"/>
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- CARD 4 -->
+
+            <com.google.android.material.card.MaterialCardView
+
+                android:layout_width="0dp"
+
+                android:layout_height="240dp"
+
+                android:layout_weight="1"
+
+                android:layout_marginStart="1dp"
+
+                app:cardCornerRadius="24dp"
+
+                app:cardElevation="5dp"
+
+                app:cardUseCompatPadding="true"
+
+                app:strokeColor="#EFE7DD"
+
+                app:strokeWidth="1dp"
+
+                app:cardBackgroundColor="#FFFCF8">
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+
+                    android:layout_height="match_parent"
+
+                    android:orientation="vertical"
+
+                    android:padding="20dp">
+
+                    <LinearLayout
+
+                        android:layout_width="30dp"
+
+                        android:layout_height="30dp"
+
+                        android:gravity="center"
+
+                        android:background="@drawable/bg_circle_soft"
+
+                        android:layout_marginBottom="5dp">
+
+                        <ImageView
+
+                            android:layout_width="24dp"
+
+                            android:layout_height="24dp"
+
+                            android:src="@drawable/ic_chart"
+
+                            app:tint="#2B140A"/>
+
+                    </LinearLayout>
+
+                    <TextView
+
+                        android:layout_width="wrap_content"
+
+                        android:layout_height="wrap_content"
+
+                        android:text="PROMEDIO"
+
+                        android:textColor="#8B7B6B"
+
+                        android:textSize="13sp"
+
+                        android:textStyle="bold"/>
+
+                    <TextView
+
+                        android:id="@+id/textPromedioDeuda"
+
+                        android:layout_width="wrap_content"
+
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginTop="8dp"
+
+                        android:text="$0"
+
+                        android:textColor="#2B140A"
+
+                        android:textSize="24sp"
+
+                        android:textStyle="bold"/>
+
+                    <TextView
+
+                        android:layout_width="wrap_content"
+
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginTop="6dp"
+
+                        android:text="Por cliente"
+
+                        android:textColor="#A69689"
+
+                        android:textSize="15sp"/>
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+
+        <!-- TOP DEUDORES -->
+
+        <com.google.android.material.card.MaterialCardView
+
+            android:layout_width="match_parent"
+
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="24dp"
+
+            app:cardCornerRadius="24dp"
+
+            app:cardElevation="5dp"
+
+            app:cardUseCompatPadding="true"
+
+            app:strokeColor="#EFE7DD"
+
+            app:strokeWidth="1dp"
+
+            app:cardBackgroundColor="#FFFCF8">
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+
+                android:orientation="vertical"
+
+                android:padding="24dp">
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+
+                    android:layout_height="wrap_content"
+
+                    android:text="TOP 3 MAYORES DEUDORES"
+
+                    android:textColor="#2D1B10"
+
+                    android:textSize="22sp"
+
+                    android:textStyle="bold"/>
+
+                <TextView
+
+                    android:id="@+id/textTop1"
+
+                    android:layout_width="match_parent"
+
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginTop="24dp"
+
+                    android:textColor="#2B140A"
+
+                    android:textSize="22sp"
+
+                    android:textStyle="bold"
+
+                    android:lineSpacingExtra="8dp"/>
+
+                <View
+
+                    android:layout_width="match_parent"
+
+                    android:layout_height="1dp"
+
+                    android:layout_marginTop="18dp"
+
+                    android:background="#EEE5DB"/>
+
+                <TextView
+
+                    android:id="@+id/textTop2"
+
+                    android:layout_width="match_parent"
+
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginTop="18dp"
+
+                    android:textColor="#2B140A"
+
+                    android:textSize="22sp"
+
+                    android:textStyle="bold"
+
+                    android:lineSpacingExtra="8dp"/>
+
+                <View
+
+                    android:layout_width="match_parent"
+
+                    android:layout_height="1dp"
+
+                    android:layout_marginTop="18dp"
+
+                    android:background="#EEE5DB"/>
+
+                <TextView
+
+                    android:id="@+id/textTop3"
+
+                    android:layout_width="match_parent"
+
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginTop="18dp"
+
+                    android:textColor="#2B140A"
+
+                    android:textSize="22sp"
+
+                    android:textStyle="bold"
+
+                    android:lineSpacingExtra="8dp"/>
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+
+</ScrollView>

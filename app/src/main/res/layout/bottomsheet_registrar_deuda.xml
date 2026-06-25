@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:layout_width="match_parent"
+
+    android:layout_height="wrap_content"
+
+    android:orientation="vertical"
+
+    android:padding="20dp"
+
+    android:background="#F8F3EA">
+
+    <!-- TITULO -->
+
+    <TextView
+        android:layout_width="wrap_content"
+
+        android:layout_height="wrap_content"
+
+        android:text="REGISTRAR FIADO"
+
+        android:textSize="24sp"
+
+        android:textStyle="bold"
+
+        android:textColor="#2D1B10"
+
+        android:layout_gravity="center_horizontal"/>
+
+    <!-- CLIENTE -->
+
+    <AutoCompleteTextView
+        android:id="@+id/editCliente"
+
+        android:layout_width="match_parent"
+
+        android:layout_height="55dp"
+
+        android:layout_marginTop="20dp"
+
+        android:background="#FFFFFF"
+
+        android:hint="Cliente"
+
+        android:textColor="#2D1B10"
+
+        android:textColorHint="#8B7B6B"
+
+        android:paddingStart="18dp"
+
+        android:paddingEnd="18dp"/>
+
+    <!-- BUSCAR PRODUCTO -->
+
+    <AutoCompleteTextView
+        android:id="@+id/editBuscarProducto"
+
+        android:layout_width="match_parent"
+
+        android:layout_height="55dp"
+
+        android:layout_marginTop="18dp"
+
+        android:background="#FFFFFF"
+
+        android:hint="Buscar producto"
+
+        android:textColor="#2D1B10"
+
+        android:textColorHint="#8B7B6B"
+
+        android:paddingStart="18dp"
+
+        android:paddingEnd="18dp"/>
+
+    <!-- PRODUCTOS AGREGADOS -->
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerProductosSeleccionados"
+
+        android:layout_width="match_parent"
+
+        android:layout_height="350dp"
+
+        android:layout_marginTop="18dp"/>
+
+    <!-- TOTAL -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+
+        android:layout_height="wrap_content"
+
+        android:orientation="horizontal"
+
+        android:gravity="center_vertical"
+
+        android:layout_marginTop="18dp">
+
+        <TextView
+            android:layout_width="0dp"
+
+            android:layout_height="wrap_content"
+
+            android:layout_weight="1"
+
+            android:text="TOTAL"
+
+            android:textStyle="bold"
+
+            android:textSize="20sp"
+
+            android:textColor="#2D1B10"/>
+
+        <TextView
+            android:id="@+id/textTotalFiado"
+
+            android:layout_width="wrap_content"
+
+            android:layout_height="wrap_content"
+
+            android:text="$0"
+
+            android:textStyle="bold"
+
+            android:textSize="28sp"
+
+            android:textColor="#D13A2E"/>
+    </LinearLayout>
+
+    <!-- BOTON -->
+
+    <Button
+        android:id="@+id/btnRegistrarFiado"
+
+        android:layout_width="match_parent"
+
+        android:layout_height="58dp"
+
+        android:layout_marginTop="20dp"
+
+        android:text="REGISTRAR FIADO"
+
+        android:textStyle="bold"
+
+        android:textColor="#2D1B10"
+
+        android:textSize="18sp"
+
+        android:backgroundTint="#F3CD72"/>
+
+</LinearLayout>
