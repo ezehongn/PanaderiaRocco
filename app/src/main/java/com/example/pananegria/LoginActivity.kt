@@ -210,7 +210,25 @@ PREFERENCIAS
 
         btnInvitado.setOnClickListener {
 
-            abrirMainActivity()
+            auth.signInAnonymously()
+
+                .addOnSuccessListener {
+
+                    abrirMainActivity()
+                }
+
+                .addOnFailureListener {
+
+                    Toast.makeText(
+
+                        this,
+
+                        "Error al ingresar como invitado",
+
+                        Toast.LENGTH_SHORT
+
+                    ).show()
+                }
         }
     }
 

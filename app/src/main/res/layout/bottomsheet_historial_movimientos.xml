@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:layout_width="match_parent"
+
+    android:layout_height="wrap_content"
+
+    android:orientation="vertical"
+
+    android:padding="24dp"
+
+    android:background="#F8F2EA">
+
+    <TextView
+
+        android:layout_width="wrap_content"
+
+        android:layout_height="wrap_content"
+
+        android:text="Historial de movimientos"
+
+        android:textSize="26sp"
+
+        android:textStyle="bold"
+
+        android:textColor="#2D1B10"
+
+        android:layout_marginBottom="16dp"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+
+        android:id="@+id/recyclerMovimientos"
+
+        android:layout_width="match_parent"
+
+        android:layout_height="600dp"/>
+
+</LinearLayout>

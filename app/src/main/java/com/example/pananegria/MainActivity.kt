@@ -268,6 +268,18 @@ INPUT STREAM
         }
 
         /*
+=========================
+INVITADO
+=========================
+*/
+
+        if (usuario?.isAnonymous == true) {
+
+            tabBalance.visibility =
+                View.GONE
+        }
+
+        /*
         =========================
         FRAGMENT INICIAL
         =========================

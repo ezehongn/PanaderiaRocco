@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:layout_width="match_parent"
+
+    android:layout_height="wrap_content"
+
+    android:orientation="vertical"
+
+    android:padding="20dp"
+
+    android:background="#F8F3EA">
+
+    <TextView
+        android:layout_width="wrap_content"
+
+        android:layout_height="wrap_content"
+
+        android:text="PRODUCTO MANUAL"
+
+        android:textStyle="bold"
+
+        android:textSize="22sp"
+
+        android:textColor="#2D1B10"
+
+        android:layout_gravity="center"/>
+
+    <EditText
+        android:id="@+id/editNombreManual"
+
+        android:layout_width="match_parent"
+
+        android:layout_height="55dp"
+
+        android:layout_marginTop="20dp"
+
+        android:hint="Nombre"
+
+        android:background="#FFFFFF"
+
+        android:padding="16dp"/>
+
+    <EditText
+        android:id="@+id/editPrecioManual"
+
+        android:layout_width="match_parent"
+
+        android:layout_height="55dp"
+
+        android:layout_marginTop="14dp"
+
+        android:hint="Precio"
+
+        android:inputType="numberDecimal"
+
+        android:background="#FFFFFF"
+
+        android:padding="16dp"/>
+
+    <Button
+        android:id="@+id/btnAgregarProductoManual"
+
+        android:layout_width="match_parent"
+
+        android:layout_height="55dp"
+
+        android:layout_marginTop="20dp"
+
+        android:text="Agregar"
+
+        android:textStyle="bold"
+
+        android:textColor="#2D1B10"
+
+        android:backgroundTint="#F3CD72"/>
+
+</LinearLayout>

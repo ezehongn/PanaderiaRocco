@@ -175,9 +175,34 @@ class CuentasFragment : Fragment() {
                 R.id.btnVerEstadisticas
             )
 
+        val btnHistorialMovimientos =
+            view.findViewById<Button>(
+                R.id.btnHistorialMovimientos
+            )
+
+        val esInvitado =
+
+            FirebaseAuth.getInstance()
+                .currentUser
+                ?.isAnonymous == true
+
+        if (esInvitado) {
+
+            btnVerEstadisticas.visibility =
+                View.GONE
+
+            btnHistorialMovimientos.visibility =
+                View.GONE
+        }
+
         btnVerEstadisticas.setOnClickListener {
 
             mostrarBottomSheetEstadisticas()
+        }
+
+        btnHistorialMovimientos.setOnClickListener {
+
+            mostrarBottomSheetHistorial()
         }
 
         val btnCerrarSesion =
@@ -830,6 +855,11 @@ TOP 1
                 R.id.editCliente
             )
 
+        val btnAgregarManual =
+            view.findViewById<Button>(
+                R.id.btnAgregarManual
+            )
+
         val listaClientesFirebase =
             mutableListOf<Cliente>()
 
@@ -844,6 +874,8 @@ TOP 1
 
         val listaProductosSeleccionados =
             mutableListOf<Product>()
+
+        var contadorManual = 0
 
         /*
         =========================
@@ -1221,6 +1253,119 @@ CARGAR CLIENTES
 
                 editBuscarProducto.text.clear()
             }
+        }
+
+        btnAgregarManual.setOnClickListener {
+
+            val dialogManual =
+
+                BottomSheetDialog(
+                    requireContext()
+                )
+
+            val viewManual =
+
+                layoutInflater.inflate(
+
+                    R.layout.bottomsheet_producto_manual,
+
+                    null
+                )
+
+            dialogManual.setContentView(
+                viewManual
+            )
+
+            val editNombre =
+
+                viewManual.findViewById<EditText>(
+                    R.id.editNombreManual
+                )
+
+            val editPrecio =
+
+                viewManual.findViewById<EditText>(
+                    R.id.editPrecioManual
+                )
+
+            val btnAgregar =
+
+                viewManual.findViewById<Button>(
+                    R.id.btnAgregarProductoManual
+                )
+
+            btnAgregar.setOnClickListener {
+
+                val nombre =
+
+                    editNombre.text.toString()
+                        .trim()
+
+                val precio =
+
+                    editPrecio.text.toString()
+                        .toDoubleOrNull()
+
+                if (
+
+                    nombre.isEmpty()
+                    ||
+                    precio == null
+
+                ) {
+
+                    Toast.makeText(
+
+                        requireContext(),
+
+                        "Completá todos los campos",
+
+                        Toast.LENGTH_SHORT
+
+                    ).show()
+
+                    return@setOnClickListener
+                }
+
+                contadorManual++
+
+                val productoManual =
+
+                    Product(
+
+                        id =
+                            "manual_$contadorManual",
+
+                        nombre =
+                            nombre,
+
+                        precio =
+                            precio,
+
+                        unidadMedida =
+                            "Por unidad",
+
+                        categorias =
+                            emptyList(),
+
+                        imageUrl = "",
+
+                        activo = true
+                    )
+
+                listaProductosSeleccionados.add(
+                    productoManual
+                )
+
+                adapterFiado.notifyItemInserted(
+
+                    listaProductosSeleccionados.size - 1
+                )
+
+                dialogManual.dismiss()
+            }
+
+            dialogManual.show()
         }
 
         dialog.show()
@@ -1648,6 +1793,20 @@ LISTA
                         detalle.pagado =
                             pagado
 
+                        if (pagado) {
+
+                            registrarMovimiento(
+
+                                cliente = cliente.nombre,
+
+                                descripcion =
+
+                                    "Pagó ${detalle.nombreProducto}",
+
+                                monto = detalle.subtotal
+                            )
+                        }
+
                         /*
                         =========================
                         RECALCULAR FOOTER
@@ -2015,6 +2174,17 @@ LISTA
                     )
 
                     docDetalle.set(detalle)
+
+                    registrarMovimiento(
+
+                        cliente = clienteNombre,
+
+                        descripcion =
+
+                            "Se registró ${detalle.nombreProducto}",
+
+                        monto = subtotal
+                    )
                 }
 
                 Toast.makeText(
@@ -2106,5 +2276,117 @@ CERRAR BOTTOMSHEET
         }
 
         chipGroup.addView(chip)
+    }
+
+    private fun registrarMovimiento(
+
+        cliente: String,
+
+        descripcion: String,
+
+        monto: Double
+
+    ) {
+
+        val usuario =
+
+            FirebaseAuth.getInstance()
+                .currentUser
+
+        val nombreUsuario =
+
+            if (usuario?.isAnonymous == true) {
+
+                "Invitado"
+
+            } else {
+
+                usuario?.email ?: "Desconocido"
+            }
+
+        val movimiento = hashMapOf(
+
+            "cliente" to cliente,
+
+            "descripcion" to descripcion,
+
+            "monto" to monto,
+
+            "usuario" to nombreUsuario,
+
+            "fecha" to System.currentTimeMillis()
+        )
+
+        db.collection("movimientos")
+
+            .add(movimiento)
+    }
+
+    private fun mostrarBottomSheetHistorial() {
+
+        val dialog =
+            BottomSheetDialog(requireContext())
+
+        val view =
+            layoutInflater.inflate(
+
+                R.layout
+                    .bottomsheet_historial_movimientos,
+
+                null
+            )
+
+        dialog.setContentView(view)
+
+        val recycler =
+            view.findViewById<RecyclerView>(
+                R.id.recyclerMovimientos
+            )
+
+        val listaMovimientos =
+            mutableListOf<Movimiento>()
+
+        recycler.layoutManager =
+            LinearLayoutManager(
+                requireContext()
+            )
+
+        val adapter =
+
+            MovimientoAdapter(
+                listaMovimientos
+            )
+
+        recycler.adapter = adapter
+
+        db.collection("movimientos")
+
+            .orderBy(
+                "fecha",
+                com.google.firebase.firestore.Query.Direction.DESCENDING
+            )
+
+            .get()
+
+            .addOnSuccessListener { result ->
+
+                listaMovimientos.clear()
+
+                for (document in result) {
+
+                    val movimiento =
+                        document.toObject(
+                            Movimiento::class.java
+                        )
+
+                    listaMovimientos.add(
+                        movimiento
+                    )
+                }
+
+                adapter.notifyDataSetChanged()
+            }
+
+        dialog.show()
     }
 }
