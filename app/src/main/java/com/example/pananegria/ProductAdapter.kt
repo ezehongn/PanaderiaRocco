@@ -27,6 +27,9 @@ class ProductAdapter(
 
         val textPrecio: TextView =
             view.findViewById(R.id.textPrecio)
+
+        val textUnidad: TextView =
+            view.findViewById(R.id.textUnidad)
     }
 
     override fun onCreateViewHolder(
@@ -70,6 +73,9 @@ RESET IMAGEVIEW
 
         holder.textNombre.text =
             producto.nombre
+
+        holder.textUnidad.text =
+            producto.unidadMedida
 
         val unidad =
 

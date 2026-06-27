@@ -15,7 +15,7 @@ import android.widget.ImageView
 
 import androidx.core.widget.addTextChangedListener
 import androidx.fragment.app.Fragment
-import androidx.recyclerview.widget.GridLayoutManager
+import java.text.Normalizer
 import androidx.recyclerview.widget.RecyclerView
 
 import com.google.android.material.bottomsheet.BottomSheetDialog
@@ -24,7 +24,7 @@ import com.google.firebase.firestore.FirebaseFirestore
 import coil.load
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import android.widget.Button
-
+import androidx.recyclerview.widget.LinearLayoutManager
 
 
 class BusquedaFragment : Fragment() {
@@ -225,9 +225,8 @@ class BusquedaFragment : Fragment() {
             adapter
 
         recyclerProductos.layoutManager =
-            GridLayoutManager(
-                requireContext(),
-                2
+            LinearLayoutManager(
+                requireContext()
             )
 
         recyclerProductos.addItemDecoration(
@@ -258,19 +257,29 @@ class BusquedaFragment : Fragment() {
 
             } else {
 
+                val textoBusquedaNormalizado =
+
+                    normalizarTexto(textoBusqueda)
+
                 val productosFiltrados =
 
                     listaProductosOriginal.filter { producto ->
 
-                        producto.nombre.lowercase()
-                            .contains(textoBusqueda)
+                        normalizarTexto(
+                            producto.nombre
+                        ).contains(
+                            textoBusquedaNormalizado
+                        )
 
                                 ||
 
                                 producto.categorias.any { categoria ->
 
-                                    categoria.lowercase()
-                                        .contains(textoBusqueda)
+                                    normalizarTexto(
+                                        categoria
+                                    ).contains(
+                                        textoBusquedaNormalizado
+                                    )
                                 }
                     }
 
@@ -1030,6 +1039,20 @@ EDITAR NOMBRE
             )
 
             .show()
+    }
+
+    private fun normalizarTexto(
+        texto: String
+    ): String {
+
+        return Normalizer.normalize(
+            texto.lowercase(),
+            Normalizer.Form.NFD
+        )
+            .replace(
+                "\\p{InCombiningDiacriticalMarks}+".toRegex(),
+                ""
+            )
     }
 
 }

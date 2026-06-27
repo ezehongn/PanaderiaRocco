@@ -3,44 +3,94 @@
 <androidx.cardview.widget.CardView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+
     android:layout_width="match_parent"
-    android:layout_height="290dp"
-    android:layout_margin="10dp"
-    app:cardCornerRadius="22dp"
+    android:layout_height="110dp"
+
+    android:layout_marginStart="12dp"
+    android:layout_marginEnd="12dp"
+    android:layout_marginTop="8dp"
+
+    app:cardCornerRadius="20dp"
     app:cardElevation="4dp">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+
+        android:orientation="horizontal"
+
+        android:gravity="center_vertical"
+
+        android:padding="10dp">
+
+        <!-- IMAGEN -->
 
         <ImageView
             android:id="@+id/imageProducto"
-            android:layout_width="match_parent"
-            android:layout_height="170dp"
-            android:background="#ECECEC"
-            android:scaleType="centerCrop"/>
 
-        <TextView
-            android:id="@+id/textNombre"
-            android:layout_width="match_parent"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+
+            android:background="#ECECEC"
+
+            android:scaleType="centerCrop"
+
+            android:layout_marginEnd="14dp"/>
+
+        <!-- NOMBRE Y UNIDAD -->
+
+        <LinearLayout
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:paddingTop="14dp"
-            android:textColor="#2D1B10"
-            android:textSize="22sp"
-            android:textStyle="bold"
-            android:maxLines="2"
-            android:ellipsize="end"
-            android:gravity="center"/>
+
+            android:layout_weight="1"
+
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textNombre"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:textColor="#2D1B10"
+
+                android:textSize="18sp"
+
+                android:textStyle="bold"
+
+                android:maxLines="3"
+
+                android:ellipsize="end"/>
+
+            <TextView
+                android:id="@+id/textUnidad"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="4dp"
+
+                android:text="Por unidad"
+
+                android:textColor="#7A6B5A"
+
+                android:textSize="16sp"/>
+        </LinearLayout>
+
+        <!-- PRECIO -->
 
         <TextView
             android:id="@+id/textPrecio"
-            android:layout_width="match_parent"
+
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:gravity="center"
-            android:paddingTop="4dp"
+
             android:textColor="#D69B1F"
+
             android:textSize="30sp"
+
             android:textStyle="bold"/>
 
     </LinearLayout>
